@@ -13,14 +13,28 @@ a div/img tag that you can output the image into -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div>
-    <input type="text">
-    <button type="button" id="askBtn" onclick="randomPic()">Ask the Magic 8 Ball a Question...</button>
-    <div>
-      <img src="img/magic8ball_empty.png" alt="magic 8 ball" id="randomImg">
+  <div class="containter">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <h2 class="text-center header-text">Ask the Magic 8 Ball a Question...</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm 4 col-sm-offset-4 top-space">
+        <input type="text" placeholder="Your Question" class="textInput">
+        <button type="button" class="btn btn-default btn-lg" id="askBtn" onclick="randomPic(event)">Ask!</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3 top-space">
+        <div>
+          <img src="img/magic8ball_empty.png" alt="magic 8 ball" class="img-responsive" id="randomImg">
+        </div>
+      </div>
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
   <script src="js/scripts.js"></script>
 </body>
 </html>
